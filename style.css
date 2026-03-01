@@ -376,7 +376,7 @@ footer {
 
     min-width: 90%;
     margin: 0 auto;
-    padding: 5rem 5.6rem 3.1rem;
+    padding: 4.5rem 5.6rem 3.1rem;
 }
 
 .hero-container > * {
@@ -408,6 +408,31 @@ footer {
 }
 
 .hero-text a.btn:hover {
+    background-color: transparent;
+    color: #d91a4e;
+    border-color: #d91a4e;
+    transition: all 0.3s ease 0s;
+}
+
+a.btn {
+    background-color: #d91a4e;
+    border: 0.13rem solid transparent;
+    border-radius: 6.3rem;
+
+    color: #f6f6f6;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+
+    padding: 0.6rem 1.3rem;
+    margin: 0.3rem;
+    width: 9.2rem;
+
+    cursor: pointer;
+}
+
+a.btn:hover {
     background-color: transparent;
     color: #d91a4e;
     border-color: #d91a4e;
@@ -655,10 +680,6 @@ button.submit:hover {
 
 .email {
     width: 40%;
-}
-
-.email a:hover {
-    color: #26d4e2;
 }
 
 /* ABOUT PAGE */
