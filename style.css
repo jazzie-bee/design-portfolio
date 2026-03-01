@@ -681,6 +681,28 @@ button.submit:hover {
     width: 40%;
 }
 
+/* WORKS PAGE */
+
+/* PORJECT PAGE */
+.projectheader {
+    position: relative;
+    width: 106.66rem;
+    height: 60rem;
+    overflow: hidden;
+}
+
+.proejctheader img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.projecttitle {
+    color: #d91a4e;
+    position: absolute;
+    z-index: 999;
+}
+
 /* ABOUT PAGE */
 .aboutnavbar {
     margin-bottom: 8rem;
