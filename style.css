@@ -1,0 +1,700 @@
+/* 
+|| Brand colors: #d91a4e, #26d4e2
+Montserrat: Reg 400, Med 500, Semi 600, Bold 700
+Audiowide: Red 400
+*/
+
+/* CSS Organization
+CSS Headers
+RESET
+
+GENERAL
+
+BLOCKS
+
+---
+
+CSS properties
+display - flex, grid, etc.
+
+positioning - left, right, bottom, z-index, etc
+
+box-model - bg, margin, padding, H/W, border radius, etc.
+
+typography - font, size, etc.
+
+manipulation - transform, filter, opacity, etc.
+
+misc - box-shadows, effects(?), etc. */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+
+    font-size: 18px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    background-image:
+        url(https://i.ibb.co/hF0Z1F0w/top-grid-2560.webp),
+        url(https://i.ibb.co/cXSy9R20/bottom-grid-2560.webp);
+    background-color: #121212;
+    background-position:
+        top center,
+        bottom center;
+    background-repeat: no-repeat;
+    background-size: auto, auto;
+
+    gap: 2.222rem;
+    min-height: 100vh;
+}
+
+p,
+li,
+a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+
+    text-decoration: none;
+    color: #f6f6f6;
+}
+
+sub {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 0.722rem;
+    color: #f6f6f6;
+}
+
+h1 {
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 1;
+    color: #f6f6f6;
+}
+
+h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 2.667rem;
+    text-align: center;
+    text-decoration: none;
+    color: #f6f6f6;
+
+    margin-top: 30%;
+}
+
+h3 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 1.778rem;
+    line-height: 1;
+    color: #f6f6f6;
+}
+
+span {
+    color: #f6f6f6;
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+button {
+    color: #f6f6f6;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+
+    cursor: pointer;
+}
+
+nav {
+    /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+
+    text-align: center;
+
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 6.25rem;
+    margin: 0 auto 1.25rem;
+    padding: 0 3rem;
+
+    z-index: 999;
+}
+
+li a {
+    transition: all 0.3s ease 0s;
+}
+
+nav li a:hover {
+    color: #26d4e2;
+}
+
+ul {
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1.5rem;
+
+    list-style-type: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    width: 100%;
+    height: auto;
+}
+
+input {
+    border: transparent;
+    border-radius: 0.3125rem;
+    padding: 1rem 1.0625rem;
+    width: 100%;
+}
+
+textarea {
+    text-align: left;
+    vertical-align: top;
+
+    border: transparent;
+    border-radius: 0.3125rem;
+    padding: 1rem 1.0625rem;
+}
+
+input,
+textarea {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+
+    color: #f6f6f6;
+    text-align: center;
+
+    background-color: transparent;
+    padding: 5em;
+    margin-top: auto;
+    width: 100%;
+}
+
+/* || BLOCKS */
+/* || Pagedoll */
+.pagedoll-container {
+    position: fixed;
+    display: inline-block;
+    right: 0.125rem;
+    bottom: 0.125rem;
+    z-index: 100;
+}
+
+.pagedoll-container img {
+    height: auto;
+    width: 15rem;
+}
+
+.pagedoll-container .tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 0%;
+    z-index: 1;
+
+    visibility: hidden;
+
+    background-color: #6e0d27;
+    border-radius: 0.5rem;
+    padding: 0.8rem;
+    margin: 0.5rem;
+}
+
+.pagedoll-container:hover .tooltip {
+    visibility: visible;
+}
+
+.tooltip:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+
+    width: 0;
+    height: 0;
+    border: 1.25rem solid transparent;
+    border-top-color: #6e0d27;
+    border-bottom: 0;
+    margin-left: -0.625rem;
+    margin-bottom: -0.625rem;
+}
+
+/* || Nav */
+.logo img {
+    display: block;
+    width: 5.3125rem;
+    height: auto;
+}
+
+.navli a {
+    padding: 0.875rem 1rem;
+}
+
+.navbarwrapper-scroll {
+    background-color: #121212;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-family: inherit;
+    font-size: 1rem;
+    color: white;
+
+    border: none;
+    background-color: inherit;
+    outline: none;
+    padding: 0.875rem 1rem;
+    margin: 0;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #131313;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #131313;
+    min-width: 10rem;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    float: none;
+
+    color: #f6f6f6;
+    text-decoration: none;
+    text-align: left;
+    padding: 0.875rem 1rem;
+}
+
+.dropdown-content a:hover {
+    background-color: #415058;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#btn-cta {
+    background-color: #d91a4e;
+    border: 0.125rem solid transparent;
+    border-radius: 6.25rem;
+    padding: 0.625rem 1.25rem;
+    margin: 0.3125rem;
+
+    color: #f6f6f6;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+
+    cursor: pointer;
+}
+
+#btn-cta a:hover {
+    background-color: transparent;
+    color: #d91a4e;
+    border-color: #d91a4e;
+    transition: all 0.3s ease 0s;
+}
+
+/* || Hero window */
+.line-2 {
+    color: #26d4e2;
+}
+
+.title-bar {
+    border-bottom: 0.1rem solid #d91a4e;
+    padding: 0.9rem 0.9rem;
+}
+.hero-wrapper {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+
+    background: #121212;
+    border: 0.1rem solid #d91a4e;
+    width: 65%;
+    max-width: 78rem;
+    margin: 1rem auto 5rem;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap-reverse;
+
+    color: #f6f6f6;
+
+    min-width: 90%;
+    margin: 0 auto;
+    padding: 5.3rem 5.6rem 3.1rem;
+}
+
+.hero-container > * {
+    flex: 1 1 20rem;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+a.btn {
+    background-color: #d91a4e;
+    border: 0.13rem solid transparent;
+    border-radius: 6.3rem;
+
+    color: #f6f6f6;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+
+    padding: 0.6rem 1.3rem;
+    margin: 0.3rem;
+    width: 9.2rem;
+
+    cursor: pointer;
+}
+
+a.btn:hover {
+    background-color: transparent;
+    color: #d91a4e;
+    border-color: #d91a4e;
+    transition: all 0.3s ease 0s;
+}
+
+.hero-img img {
+    align-items: center;
+    max-width: 21.875rem;
+    float: right;
+}
+
+.hero-img::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: auto;
+    content: "";
+    width: 100%;
+    height: 100%;
+    max-width: 70%;
+    max-height: 70%;
+}
+
+/* || Tabs */
+.tabbed-container {
+    position: relative;
+}
+
+.tab-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 0.0625rem solid #415058;
+    border-width: 0.0625rem 0 0.0625rem 0;
+    background-color: transparent;
+    width: 100%;
+}
+
+.tablinks {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: #f6f6f6;
+    text-align: center;
+
+    background-color: inherit;
+    border: none;
+    border-radius: 0%;
+    float: left;
+    outline: none;
+    padding: 0.9375rem 9.375rem;
+    margin: 0;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tablinks:hover {
+    background-color: #333;
+}
+
+.tablinks .active {
+    background-color: #131313;
+}
+
+.tabcontent {
+    display: none;
+}
+
+/* || Page content */
+.project-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 2rem;
+    width: 100%;
+}
+
+.section-title {
+    text-align: center;
+
+    border-right: 0.0625rem solid #525252;
+    border-bottom: 0.0625rem solid #525252;
+    border-left: 0.0625rem solid #525252;
+    padding: 4rem 0.5rem;
+    width: 50%;
+    margin: auto;
+}
+
+.work-title {
+    text-align: center;
+
+    border: 0.0625rem solid #525252;
+    padding: 4rem 0.5rem;
+    margin: 2.5rem auto;
+    width: 50%;
+}
+
+.works {
+    margin: 5rem 0;
+}
+
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(
+        4,
+        1fr
+    ); /*span project cards over more cols to accomidate a lone project card that would take 2 cols to be centered. */
+    gap: 2em;
+}
+
+.card {
+    display: grid;
+    grid-column: span 2;
+
+    position: relative;
+
+    border: 0.0625rem solid #415058;
+    width: 34.375rem;
+    max-height: 39.75rem;
+    margin: 0;
+}
+
+.card:nth-last-child(1):nth-child(odd) {
+    grid-column: 2 / span 2;
+}
+
+.image-contain {
+    width: 36.5rem;
+    height: 39.75rem;
+}
+
+.thumbnail {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-color: rgba(30, 30, 30, 0.9);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: 0.5s ease;
+    padding: 0 1em;
+}
+
+.card:hover .card-content {
+    height: 100%;
+}
+
+.card-content p {
+    text-align: center;
+}
+
+.view-link {
+    text-decoration: underline;
+    cursor: pointer;
+    text-align: right;
+    margin: 5rem 0 0;
+}
+
+.seemore:hover {
+    color: #26d4e2;
+    text-decoration: dotted;
+}
+
+/* Contact */
+.contact {
+    /* display: block; */
+
+    line-height: 1.25rem;
+
+    max-width: 46.875rem;
+    margin: 8% auto;
+    gap: 2rem;
+}
+
+.contact-text {
+    text-align: left;
+
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.contact-text h4 {
+    margin: 0 0 0.5em 0;
+}
+
+.form-message {
+    height: 9.375rem;
+}
+
+button.submit {
+    background-color: #26d4e2;
+    border: 0.13rem solid transparent;
+    border-radius: 6.3rem;
+
+    color: #121212;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+
+    padding: 0.6rem 1.3rem;
+    margin: 0.3rem;
+    width: 9.2rem;
+
+    cursor: pointer;
+    align-self: end;
+}
+
+button.submit:hover {
+    background-color: transparent;
+    color: #26d4e2;
+    border-color: #26d4e2;
+    transition: all 0.3s ease 0s;
+}
+
+/* Footer */
+.copyright {
+    width: 40%;
+}
+
+.icons {
+    width: 20%;
+}
+
+.icons a {
+    padding: 0.5rem;
+}
+
+.icons a:hover {
+    color: #26d4e2;
+}
+
+.email {
+    width: 40%;
+}
+
+.email a:hover {
+    color: #26d4e2;
+}
+
+/* ABOUT PAGE */
+.aboutnavbar {
+    margin-bottom: 8rem;
+}
+
+.hero-wrapper .about {
+    margin: 1rem 5rem 5rem;
+}
+
+.vgenlink {
+    text-decoration: dotted;
+    color: #26d4e2;
+}
+
+.vgenlink:hover {
+    color: #415058;
+}
+
+/* CONTACT PAGE */
+.contact-page {
+    margin: 8rem auto 5rem;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 48rem) {
+    .pagedoll {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 78.75rem) {
+    .hero-container {
+        flex-wrap: wrap-reverse;
+    }
+
+    .hero-img {
+        margin: auto;
+    }
+}
