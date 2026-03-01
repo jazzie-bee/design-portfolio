@@ -10,20 +10,25 @@
 </head>
 <body>
     <script src="script.js"></script>
-    <nav>
-        <div class="navbar">
+    <nav class="navbarwrapper">
             <div class="logo">
                 <a href="home.html"><img src="https://i.ibb.co/W4WKJHxs/JB-logo-trans-bg.png" alt="jbdesigns-logo"></a>
             </div>
-            <div class="menu">
+            <div class="navli">
                 <ul>
-                    <li><a href="/project4/index.html">Home</a></li>
-                    <li><a href="/project4/works.html">Works</a></li>
-                    <li><a href="/project4/about.html">About</a></li>
-                    <li><a href="/project4/contact.html" class="btn btn-cta" >Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <div class="dropdown">
+                        <li><a href="works.html" class="dropbtn">Works<i class="fa fa-caret-down"></i></a></li>
+                            <div class="dropdown-content">
+                                <li><a href="/works.html#graphicDesign">Graphic Design</a></li>
+                                <li><a href="/works.html#uiuDesign">UI/UX Design</a></li>
+                                <li><a href="/works.html#webDesign">Web Design</a></li>
+                            </div>
+                    </div>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="btn btn-cta">Contact</a></li>
                 </ul>
             </div>
-        </div>
     </nav>
     
     <main>
@@ -48,7 +53,7 @@
             <a href="mail@jazbrown97@outlook.com"><i class="fa-solid fa-envelope"></i></a>
         </div>
         <div class="email">
-            <a href="mailto:jazbrown97@outlook.com">jazbrown97@outlook.com</a>
+            <p>jazbrown97@outlook.com</p>
         </div>
     </footer>
 </body>
