@@ -56,7 +56,7 @@ body {
     background-repeat: no-repeat;
     background-size: auto, auto;
 
-    gap: 2.222rem;
+    gap: 0.5rem;
     min-height: 100vh;
 }
 
@@ -370,14 +370,13 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2rem;
     flex-wrap: wrap-reverse;
 
     color: #f6f6f6;
 
     min-width: 90%;
     margin: 0 auto;
-    padding: 5.3rem 5.6rem 3.1rem;
+    padding: 5rem 5.6rem 3.1rem;
 }
 
 .hero-container > * {
@@ -390,7 +389,7 @@ footer {
     gap: 0.8rem;
 }
 
-a.btn {
+.hero-text a.btn {
     background-color: #d91a4e;
     border: 0.13rem solid transparent;
     border-radius: 6.3rem;
@@ -408,7 +407,7 @@ a.btn {
     cursor: pointer;
 }
 
-a.btn:hover {
+.hero-text a.btn:hover {
     background-color: transparent;
     color: #d91a4e;
     border-color: #d91a4e;
