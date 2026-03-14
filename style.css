@@ -596,6 +596,12 @@ a.btn:hover {
     text-align: center;
 }
 
+.skill-tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .view-link {
     text-decoration: underline;
     cursor: pointer;
