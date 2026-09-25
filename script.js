@@ -18,13 +18,3 @@ function openTabs(evt, tabName) {
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
 }
-
-// const navEl = document.querySelector('navbar-wrapper');
-
-// window.addEventListener('scroll', () => {
-//   if (window.scrollY > 50) {
-//     navEl.classList.add('navbar-wrapper-scroll');
-//   } else if (window.scrollY <= 50) {
-//     navEl.classList.remove('navbar-wrapper-scroll');
-//   }
-// });
