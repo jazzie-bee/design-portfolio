@@ -320,7 +320,7 @@ footer {
     display: block;
 }
 
-#btn-cta {
+.btn-cta {
     background-color: #d91a4e;
     border: 0.125rem solid transparent;
     border-radius: 6.25rem;
@@ -337,7 +337,7 @@ footer {
     cursor: pointer;
 }
 
-#btn-cta a:hover {
+.btn-cta a:hover {
     background-color: transparent;
     color: #d91a4e;
     border-color: #d91a4e;
@@ -495,7 +495,7 @@ a.btn:hover {
     background-color: #333;
 }
 
-.tablinks .active {
+.tablinks.active {
     background-color: #131313;
 }
 
