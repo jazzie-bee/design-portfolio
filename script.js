@@ -1,20 +1,17 @@
-function openTabs(evt, tabName) {
-  // Declare all variables
-  var i, tabcontent, tablinks;
+const tabs = document.querySelectorAll(".tablinks");
+const panels = document.querySelectorAll(".tabcontent");
 
-  // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-
-  // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-
-  // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(tabName).style.display = "block";
-  evt.currentTarget.className += " active";
+function openTab(name) {
+  tabs.forEach((tab) => {
+    const isActive = tab.dataset.tab === name;
+    tab.classList.toggle("active", isActive);
+    tab.setAttribute("aria-selected", isActive);
+  });
+  panels.forEach((panel) => {
+    panel.classList.toggle("active", panel.id === name);
+  });
 }
+
+tabs.forEach((tab) => {
+  tab.addEventListener("click", () => openTab(tab.dataset.tab));
+});

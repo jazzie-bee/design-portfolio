@@ -20,6 +20,8 @@
                     <li class="dropdown"><a href="works.html" class="dropbtn">Works<i class="fa fa-caret-down"></i></a>
                         <ul class="dropdown-content">
                             <li><a href="/works.html#graphicDesign">Graphic Design</a></li>
+                            <li class="sub-item"><a href="logofolio.html/">Logos</a></li>
+                            <li class="sub-item"><a href="posters.html">Posters</a></li>
                             <li><a href="/works.html#uiuxDesign">UI/UX Design</a></li>
                             <li><a href="/works.html#webDesign">Web Design</a></li>
                         </ul>
@@ -48,14 +50,14 @@
         <div class="gallery-container">
             <div class="tabbed-container">
                 <!-- Tab links -->
-                <div class="tab-list">
-                    <button class="tablinks" onclick="openTabs(event, 'graphicDesign')">Graphic Design</button>
-                    <button class="tablinks" onclick="openTabs(event, 'uiux')">UI/UX Design</button>
-                    <button class="tablinks" onclick="openTabs(event, 'webDesign')">Web Design</button>
+                <div class="tab-list" role="tablist">
+                    <button class="tablinks active" role="tab" id="tab-graphicDesign">Graphic Design</button>
+                    <button class="tablinks" role="tab" id="tab-uiuxDesign">UI/UX Design</button>
+                    <button class="tablinks" role="tab" id="tab-webDesign">Web Design</button>
                 </div>
                 <!-- Tab content -->
                 <div class="tabcontent">
-                    <div id="graphicDesign" class="project-content" data-section="graphicDesign">
+                    <div id="graphicDesign" class="tabcontent project-content active" role="tabpanel" data-section="graphicDesign">
                         <div class="section-title"><h1>Graphic Design</h1></div>
                         <div class="project-cards">
                             <div class="card">
@@ -76,9 +78,11 @@
                                     <div class="view-link"><sub class="view-link">View Case Study</sub></div>
                                 </div>
                             </div>
+                            <a href="works.html#graphicDesign" class="seemore">See all Graphic Design</a>
                         </div>
                     </div>
-                    <div id="uiux" class="project-content" data-section="uiux">
+
+                    <div id="uiux" class="tabcontent project-content" role="tabpanel" data-section="uiux">
                         <div class="section-title"><h1>UI/UX</h1></div>
                         <div class="project-cards">
                             <div class="card">
@@ -99,9 +103,11 @@
                                     <div class="view-link"><sub class="view-link">View Case Study</sub></div>
                                 </div>
                             </div>
+                            <a href="works.html#uiuxDesign" class="seemore">See all UI/UX Design</a>
                         </div>
                     </div>
-                    <div id="webDesign" class="project-content" data-section="webDesign">
+
+                    <div id="webDesign" class="tabcontent project-content" role="tabpanel" data-section="webDesign">
                         <div class="section-title"><h1>Web Design</h1></div>
                         <div class="project-cards">
                             <div class="card">
@@ -114,6 +120,7 @@
                                 </div>
                             </div>
                         </div>
+                        <a href="works.html#webDesign" class="seemore">See all Web Design</a>
                     </div>
                 </div>
             </div>

@@ -320,6 +320,20 @@ footer {
     display: block;
 }
 
+.dropdown-content .sub-item a {
+    padding-left: 2rem;
+    font-size: 0.889rem;
+    color: #b5b5b5;
+}
+
+.dropdown-content .sub-item a::before {
+    content: "– ";
+}
+
+.dropdown-content .sub-item a:hover {
+    color: #f6f6f6;
+}
+
 .btn-cta {
     background-color: #d91a4e;
     border: 0.125rem solid transparent;
@@ -497,10 +511,16 @@ a.btn:hover {
 
 .tablinks.active {
     background-color: #131313;
+    border-bottom: 0.125rem solid #2dd4e2;
 }
 
-.tabcontent {
+.tabcontent:not(.active) {
     display: none;
+}
+
+.tablinks {
+    flex: 1;
+    padding: 1rem 1rem;
 }
 
 /* || Page content */
